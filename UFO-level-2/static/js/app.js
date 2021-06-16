@@ -95,20 +95,37 @@ form.on("submit", runFilter);
   
         // Get the value property of the input element
         var dateValues = filterDates.property("value");
-        console.log(dateValues);
     
-           // Select the input element and get the raw HTML node
-           var filterState = d3.select("#state");
+        // Select the input element and get the raw HTML node
+        var filterState = d3.select("#state");
       
-           // Get the value property of the input element
-           var stateValues = filterState.property("value");
-           console.log(stateValues);
+        // Get the value property of the input element
+        var stateValues = filterState.property("value");
       
-    
+        // Select the input element and get the raw HTML node
+        var filterCity = d3.select("#city");
+      
+        // Get the value property of the input element
+        var cityValues = filterCity.property("value");
+
+        // Select the input element and get the raw HTML node
+        var filterCountry = d3.select("#country");
+      
+        // Get the value property of the input element
+        var countryValues = filterCountry.property("value");
+
+        // Select the input element and get the raw HTML node
+        var filterShape = d3.select("#shape");
+      
+        // Get the value property of the input element
+        var shapeValues = filterShape.property("value");
+
+
+
     
     
          
-        tableData.filter( i => {return (i.datetime === (dateValues ? dateValues : i.datetime)) && (i.state === (stateValues ? stateValues : i.state))}).forEach((ufoSiting) => {
+        tableData.filter( i => {return (i.datetime === (dateValues ? dateValues : i.datetime)) && (i.state === (stateValues ? stateValues : i.state)) && (i.city === (cityValues ? cityValues : i.citytime)) && (i.county === (countryValues ? countryValues : i.country)) && (i.shape === (shapeValues ? shapeValues : i.shape))}).forEach((ufoSiting) => {
             var row = tbody.append("tr");
             Object.entries(ufoSiting).forEach(([key, value]) => {
               var cell = row.append("td");
