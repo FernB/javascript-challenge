@@ -40,28 +40,50 @@
                         <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
                       </li>
 
-                      <!-- ttest -->
+                      <!-- additional filters -->
+
+                      
                       <li class="filter list-group-item">
-                        <label for="city">Select City</label>
-                        <select class="custom-select mr-sm-2" id="city">
-                          <option disabled selected value="">Choose..</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
-                          <option value="3">Three</option>
-                        </select>
-                      </li>
+                      <label for="city" class="form-label">Enter a City</label>
+                      <input class="form-control" list="datalistOptions" id="city" placeholder="Type to search...">
+                      <datalist id="datalistOptions">
+ 
+                      </datalist>
+                    </li>
+
+
+
+
+
+
                       <li class="filter list-group-item">
                         <label for="state">Select State</label>
                         <select class="custom-select mr-sm-2" id="state">
-                          <option disabled selected value="">Choose..</option>
+                          <option selected value="">Choose..</option>
+                         
+                        </select>
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="country">Select Country</label>
+                        <select class="custom-select mr-sm-2" id="country">
+                          <option selected value="">Choose..</option>
+                         
+                        </select>
+                      </li>
+                      <li class="filter list-group-item">
+                        <label for="shape">Select Shape</label>
+                        <select class="custom-select mr-sm-2" id="shape">
+                          <option selected value="">Choose..</option>
                          
                         </select>
                       </li>
 
-
                     </ul>
                   </div>
                   <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                  <button id="clear-btn" type="button" class="btn btn-default">Clear Filters</button>
+
+
                 </form>
               </div>
             </div>
