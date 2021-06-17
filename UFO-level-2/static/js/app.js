@@ -130,6 +130,14 @@ function runClear () {
   d3.select("#city").attr("value","");
   d3.select("#city").text("");
 
+  d3.select("#state").attr("value","");
+  d3.select("#state").text("");
+
+  d3.select("#country").attr("value","");
+  d3.select("#country").text("");
+
+  d3.select("#shape").attr("value","");
+  d3.select("#shape").text("");
 
 
   tableData.forEach((ufoSiting) => {
