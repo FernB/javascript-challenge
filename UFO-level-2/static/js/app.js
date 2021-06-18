@@ -117,38 +117,9 @@ form.on("submit", runFilter);
 // select clear button
 var clearButton = d3.select("#clear-btn");
 
-// call clear cuntions
-clearButton.on("click", runClear);
+// clear table filters by reloading page
+clearButton.on("click", () => {location.reload(); return false});
 
-// clear all table filters
-function runClear () {
-
-  
-  d3.select("#datetime").attr("value","");
-  d3.select("#datetime").text("");
-
-  d3.select("#city").attr("value","");
-  d3.select("#city").text("");
-
-  d3.select("#state").attr("value","");
-  d3.select("#state").text("");
-
-  d3.select("#country").attr("value","");
-  d3.select("#country").text("");
-
-  d3.select("#shape").attr("value","");
-  d3.select("#shape").text("");
-
-
-  tableData.forEach((ufoSiting) => {
-    var row = tbody.append("tr");
-    Object.entries(ufoSiting).forEach(([key, value]) => {
-      var cell = row.append("td");
-      cell.text(value);
-    });
-  });
-
-}
 
 // function to filter table based on form selections
 
