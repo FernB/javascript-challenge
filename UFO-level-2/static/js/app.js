@@ -35,7 +35,7 @@ var cityselect = d3.select("#datalistOptions");
 
 cityList.forEach(i => {
   var option = cityselect.append("option");
-  var optionValue = option.attr("value",i);
+  option.attr("value",i);
  });
 
 
@@ -45,8 +45,8 @@ stateList = [];
   
 tableData.forEach((ufoSiting) => {
   Object.entries(ufoSiting).forEach(([key, value]) => {
-    if(key === "state" && !stateList.includes(value)) 
-    stateList.push(value);
+    if(key === "state" && !stateList.includes(value)){ 
+    stateList.push(value);}
     });
   });
   
@@ -63,12 +63,12 @@ stateList.forEach(i => {
 
 // get list of unique countries
 
-countryList = []
+countryList = [];
   
 tableData.forEach((ufoSiting) => {
   Object.entries(ufoSiting).forEach(([key, value]) => {
-    if(key === "country" && !countryList.includes(value)) 
-    countryList.push(value);
+    if(key === "country" && !countryList.includes(value)){ 
+    countryList.push(value);}
     });
   });
       
@@ -86,8 +86,8 @@ shapeList = [];
 
 tableData.forEach((ufoSiting) => {
   Object.entries(ufoSiting).forEach(([key, value]) => {
-    if(key === "shape" && !shapeList.includes(value)) 
-    shapeList.push(value);
+    if(key === "shape" && !shapeList.includes(value)){ 
+    shapeList.push(value);}
     });
   });
 
